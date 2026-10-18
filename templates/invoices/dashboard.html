@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>{{ business.name }}</h1><p>Keep documents and review progress in one place.</p><div class="cards">{% for label,count in counts %}<section class="panel"><h2>{{ label }}</h2><p class="count">{{ count }}</p></section>{% endfor %}</div><h2>Recent invoices</h2>{% include 'invoices/table.html' with records=recent %}{% endblock %}

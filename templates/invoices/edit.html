@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="panel narrow"><h1>Edit invoice #{{ invoice.pk }}</h1><p>Drafts may be incomplete. Enter all required details before submitting.</p><form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Save details</button> <a href="{{ invoice.get_absolute_url }}">Cancel</a></form></section>{% endblock %}
